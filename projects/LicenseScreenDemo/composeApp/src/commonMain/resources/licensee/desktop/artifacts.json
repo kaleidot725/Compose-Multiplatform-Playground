@@ -1,0 +1,738 @@
+[
+    {
+        "groupId": "org.jetbrains",
+        "artifactId": "annotations",
+        "version": "13.0",
+        "name": "IntelliJ IDEA Annotations",
+        "spdxLicenses": [
+            {
+                "identifier": "Apache-2.0",
+                "name": "Apache License 2.0",
+                "url": "https://www.apache.org/licenses/LICENSE-2.0"
+            }
+        ],
+        "scm": {
+            "url": "https://github.com/JetBrains/intellij-community"
+        }
+    },
+    {
+        "groupId": "org.jetbrains.compose.animation",
+        "artifactId": "animation",
+        "version": "1.5.1",
+        "name": "Compose Animation",
+        "spdxLicenses": [
+            {
+                "identifier": "Apache-2.0",
+                "name": "Apache License 2.0",
+                "url": "https://www.apache.org/licenses/LICENSE-2.0"
+            }
+        ],
+        "scm": {
+            "url": "https://github.com/JetBrains/compose-jb"
+        }
+    },
+    {
+        "groupId": "org.jetbrains.compose.animation",
+        "artifactId": "animation-core",
+        "version": "1.5.1",
+        "name": "Compose Animation Core",
+        "spdxLicenses": [
+            {
+                "identifier": "Apache-2.0",
+                "name": "Apache License 2.0",
+                "url": "https://www.apache.org/licenses/LICENSE-2.0"
+            }
+        ],
+        "scm": {
+            "url": "https://github.com/JetBrains/compose-jb"
+        }
+    },
+    {
+        "groupId": "org.jetbrains.compose.animation",
+        "artifactId": "animation-core-desktop",
+        "version": "1.5.1",
+        "name": "Compose Animation Core",
+        "spdxLicenses": [
+            {
+                "identifier": "Apache-2.0",
+                "name": "Apache License 2.0",
+                "url": "https://www.apache.org/licenses/LICENSE-2.0"
+            }
+        ],
+        "scm": {
+            "url": "https://github.com/JetBrains/compose-jb"
+        }
+    },
+    {
+        "groupId": "org.jetbrains.compose.animation",
+        "artifactId": "animation-desktop",
+        "version": "1.5.1",
+        "name": "Compose Animation",
+        "spdxLicenses": [
+            {
+                "identifier": "Apache-2.0",
+                "name": "Apache License 2.0",
+                "url": "https://www.apache.org/licenses/LICENSE-2.0"
+            }
+        ],
+        "scm": {
+            "url": "https://github.com/JetBrains/compose-jb"
+        }
+    },
+    {
+        "groupId": "org.jetbrains.compose.components",
+        "artifactId": "components-resources",
+        "version": "1.5.1",
+        "name": "Resources for Compose JB",
+        "spdxLicenses": [
+            {
+                "identifier": "Apache-2.0",
+                "name": "Apache License 2.0",
+                "url": "https://www.apache.org/licenses/LICENSE-2.0"
+            }
+        ],
+        "scm": {
+            "url": "https://github.com/JetBrains/compose-jb"
+        }
+    },
+    {
+        "groupId": "org.jetbrains.compose.components",
+        "artifactId": "components-resources-desktop",
+        "version": "1.5.1",
+        "name": "Resources for Compose JB",
+        "spdxLicenses": [
+            {
+                "identifier": "Apache-2.0",
+                "name": "Apache License 2.0",
+                "url": "https://www.apache.org/licenses/LICENSE-2.0"
+            }
+        ],
+        "scm": {
+            "url": "https://github.com/JetBrains/compose-jb"
+        }
+    },
+    {
+        "groupId": "org.jetbrains.compose.desktop",
+        "artifactId": "desktop",
+        "version": "1.5.1",
+        "name": "Compose Desktop",
+        "spdxLicenses": [
+            {
+                "identifier": "Apache-2.0",
+                "name": "Apache License 2.0",
+                "url": "https://www.apache.org/licenses/LICENSE-2.0"
+            }
+        ],
+        "scm": {
+            "url": "https://github.com/JetBrains/compose-jb"
+        }
+    },
+    {
+        "groupId": "org.jetbrains.compose.desktop",
+        "artifactId": "desktop-jvm",
+        "version": "1.5.1",
+        "name": "Compose Desktop",
+        "spdxLicenses": [
+            {
+                "identifier": "Apache-2.0",
+                "name": "Apache License 2.0",
+                "url": "https://www.apache.org/licenses/LICENSE-2.0"
+            }
+        ],
+        "scm": {
+            "url": "https://github.com/JetBrains/compose-jb"
+        }
+    },
+    {
+        "groupId": "org.jetbrains.compose.desktop",
+        "artifactId": "desktop-jvm-macos-arm64",
+        "version": "1.5.1",
+        "name": "Compose Desktop",
+        "spdxLicenses": [
+            {
+                "identifier": "Apache-2.0",
+                "name": "Apache License 2.0",
+                "url": "https://www.apache.org/licenses/LICENSE-2.0"
+            }
+        ],
+        "scm": {
+            "url": "https://github.com/JetBrains/compose-jb"
+        }
+    },
+    {
+        "groupId": "org.jetbrains.compose.foundation",
+        "artifactId": "foundation",
+        "version": "1.5.1",
+        "name": "Compose Foundation",
+        "spdxLicenses": [
+            {
+                "identifier": "Apache-2.0",
+                "name": "Apache License 2.0",
+                "url": "https://www.apache.org/licenses/LICENSE-2.0"
+            }
+        ],
+        "scm": {
+            "url": "https://github.com/JetBrains/compose-jb"
+        }
+    },
+    {
+        "groupId": "org.jetbrains.compose.foundation",
+        "artifactId": "foundation-desktop",
+        "version": "1.5.1",
+        "name": "Compose Foundation",
+        "spdxLicenses": [
+            {
+                "identifier": "Apache-2.0",
+                "name": "Apache License 2.0",
+                "url": "https://www.apache.org/licenses/LICENSE-2.0"
+            }
+        ],
+        "scm": {
+            "url": "https://github.com/JetBrains/compose-jb"
+        }
+    },
+    {
+        "groupId": "org.jetbrains.compose.foundation",
+        "artifactId": "foundation-layout",
+        "version": "1.5.1",
+        "name": "Compose Layouts",
+        "spdxLicenses": [
+            {
+                "identifier": "Apache-2.0",
+                "name": "Apache License 2.0",
+                "url": "https://www.apache.org/licenses/LICENSE-2.0"
+            }
+        ],
+        "scm": {
+            "url": "https://github.com/JetBrains/compose-jb"
+        }
+    },
+    {
+        "groupId": "org.jetbrains.compose.foundation",
+        "artifactId": "foundation-layout-desktop",
+        "version": "1.5.1",
+        "name": "Compose Layouts",
+        "spdxLicenses": [
+            {
+                "identifier": "Apache-2.0",
+                "name": "Apache License 2.0",
+                "url": "https://www.apache.org/licenses/LICENSE-2.0"
+            }
+        ],
+        "scm": {
+            "url": "https://github.com/JetBrains/compose-jb"
+        }
+    },
+    {
+        "groupId": "org.jetbrains.compose.material",
+        "artifactId": "material",
+        "version": "1.5.1",
+        "name": "Compose Material Components",
+        "spdxLicenses": [
+            {
+                "identifier": "Apache-2.0",
+                "name": "Apache License 2.0",
+                "url": "https://www.apache.org/licenses/LICENSE-2.0"
+            }
+        ],
+        "scm": {
+            "url": "https://github.com/JetBrains/compose-jb"
+        }
+    },
+    {
+        "groupId": "org.jetbrains.compose.material",
+        "artifactId": "material-desktop",
+        "version": "1.5.1",
+        "name": "Compose Material Components",
+        "spdxLicenses": [
+            {
+                "identifier": "Apache-2.0",
+                "name": "Apache License 2.0",
+                "url": "https://www.apache.org/licenses/LICENSE-2.0"
+            }
+        ],
+        "scm": {
+            "url": "https://github.com/JetBrains/compose-jb"
+        }
+    },
+    {
+        "groupId": "org.jetbrains.compose.material",
+        "artifactId": "material-icons-core",
+        "version": "1.5.1",
+        "name": "Compose Material Icons Core",
+        "spdxLicenses": [
+            {
+                "identifier": "Apache-2.0",
+                "name": "Apache License 2.0",
+                "url": "https://www.apache.org/licenses/LICENSE-2.0"
+            }
+        ],
+        "scm": {
+            "url": "https://github.com/JetBrains/compose-jb"
+        }
+    },
+    {
+        "groupId": "org.jetbrains.compose.material",
+        "artifactId": "material-icons-core-desktop",
+        "version": "1.5.1",
+        "name": "Compose Material Icons Core",
+        "spdxLicenses": [
+            {
+                "identifier": "Apache-2.0",
+                "name": "Apache License 2.0",
+                "url": "https://www.apache.org/licenses/LICENSE-2.0"
+            }
+        ],
+        "scm": {
+            "url": "https://github.com/JetBrains/compose-jb"
+        }
+    },
+    {
+        "groupId": "org.jetbrains.compose.material",
+        "artifactId": "material-ripple",
+        "version": "1.5.1",
+        "name": "Compose Material Ripple",
+        "spdxLicenses": [
+            {
+                "identifier": "Apache-2.0",
+                "name": "Apache License 2.0",
+                "url": "https://www.apache.org/licenses/LICENSE-2.0"
+            }
+        ],
+        "scm": {
+            "url": "https://github.com/JetBrains/compose-jb"
+        }
+    },
+    {
+        "groupId": "org.jetbrains.compose.material",
+        "artifactId": "material-ripple-desktop",
+        "version": "1.5.1",
+        "name": "Compose Material Ripple",
+        "spdxLicenses": [
+            {
+                "identifier": "Apache-2.0",
+                "name": "Apache License 2.0",
+                "url": "https://www.apache.org/licenses/LICENSE-2.0"
+            }
+        ],
+        "scm": {
+            "url": "https://github.com/JetBrains/compose-jb"
+        }
+    },
+    {
+        "groupId": "org.jetbrains.compose.material3",
+        "artifactId": "material3",
+        "version": "1.5.1",
+        "name": "Compose Material3 Components",
+        "spdxLicenses": [
+            {
+                "identifier": "Apache-2.0",
+                "name": "Apache License 2.0",
+                "url": "https://www.apache.org/licenses/LICENSE-2.0"
+            }
+        ],
+        "scm": {
+            "url": "https://github.com/JetBrains/compose-jb"
+        }
+    },
+    {
+        "groupId": "org.jetbrains.compose.material3",
+        "artifactId": "material3-desktop",
+        "version": "1.5.1",
+        "name": "Compose Material3 Components",
+        "spdxLicenses": [
+            {
+                "identifier": "Apache-2.0",
+                "name": "Apache License 2.0",
+                "url": "https://www.apache.org/licenses/LICENSE-2.0"
+            }
+        ],
+        "scm": {
+            "url": "https://github.com/JetBrains/compose-jb"
+        }
+    },
+    {
+        "groupId": "org.jetbrains.compose.runtime",
+        "artifactId": "runtime",
+        "version": "1.5.1",
+        "name": "Compose Runtime",
+        "spdxLicenses": [
+            {
+                "identifier": "Apache-2.0",
+                "name": "Apache License 2.0",
+                "url": "https://www.apache.org/licenses/LICENSE-2.0"
+            }
+        ],
+        "scm": {
+            "url": "https://github.com/JetBrains/compose-jb"
+        }
+    },
+    {
+        "groupId": "org.jetbrains.compose.runtime",
+        "artifactId": "runtime-desktop",
+        "version": "1.5.1",
+        "name": "Compose Runtime",
+        "spdxLicenses": [
+            {
+                "identifier": "Apache-2.0",
+                "name": "Apache License 2.0",
+                "url": "https://www.apache.org/licenses/LICENSE-2.0"
+            }
+        ],
+        "scm": {
+            "url": "https://github.com/JetBrains/compose-jb"
+        }
+    },
+    {
+        "groupId": "org.jetbrains.compose.runtime",
+        "artifactId": "runtime-saveable",
+        "version": "1.5.1",
+        "name": "Compose Saveable",
+        "spdxLicenses": [
+            {
+                "identifier": "Apache-2.0",
+                "name": "Apache License 2.0",
+                "url": "https://www.apache.org/licenses/LICENSE-2.0"
+            }
+        ],
+        "scm": {
+            "url": "https://github.com/JetBrains/compose-jb"
+        }
+    },
+    {
+        "groupId": "org.jetbrains.compose.runtime",
+        "artifactId": "runtime-saveable-desktop",
+        "version": "1.5.1",
+        "name": "Compose Saveable",
+        "spdxLicenses": [
+            {
+                "identifier": "Apache-2.0",
+                "name": "Apache License 2.0",
+                "url": "https://www.apache.org/licenses/LICENSE-2.0"
+            }
+        ],
+        "scm": {
+            "url": "https://github.com/JetBrains/compose-jb"
+        }
+    },
+    {
+        "groupId": "org.jetbrains.compose.ui",
+        "artifactId": "ui",
+        "version": "1.5.1",
+        "name": "Compose UI primitives",
+        "spdxLicenses": [
+            {
+                "identifier": "Apache-2.0",
+                "name": "Apache License 2.0",
+                "url": "https://www.apache.org/licenses/LICENSE-2.0"
+            }
+        ],
+        "scm": {
+            "url": "https://github.com/JetBrains/compose-jb"
+        }
+    },
+    {
+        "groupId": "org.jetbrains.compose.ui",
+        "artifactId": "ui-desktop",
+        "version": "1.5.1",
+        "name": "Compose UI primitives",
+        "spdxLicenses": [
+            {
+                "identifier": "Apache-2.0",
+                "name": "Apache License 2.0",
+                "url": "https://www.apache.org/licenses/LICENSE-2.0"
+            }
+        ],
+        "scm": {
+            "url": "https://github.com/JetBrains/compose-jb"
+        }
+    },
+    {
+        "groupId": "org.jetbrains.compose.ui",
+        "artifactId": "ui-geometry",
+        "version": "1.5.1",
+        "name": "Compose Geometry",
+        "spdxLicenses": [
+            {
+                "identifier": "Apache-2.0",
+                "name": "Apache License 2.0",
+                "url": "https://www.apache.org/licenses/LICENSE-2.0"
+            }
+        ],
+        "scm": {
+            "url": "https://github.com/JetBrains/compose-jb"
+        }
+    },
+    {
+        "groupId": "org.jetbrains.compose.ui",
+        "artifactId": "ui-geometry-desktop",
+        "version": "1.5.1",
+        "name": "Compose Geometry",
+        "spdxLicenses": [
+            {
+                "identifier": "Apache-2.0",
+                "name": "Apache License 2.0",
+                "url": "https://www.apache.org/licenses/LICENSE-2.0"
+            }
+        ],
+        "scm": {
+            "url": "https://github.com/JetBrains/compose-jb"
+        }
+    },
+    {
+        "groupId": "org.jetbrains.compose.ui",
+        "artifactId": "ui-graphics",
+        "version": "1.5.1",
+        "name": "Compose Graphics",
+        "spdxLicenses": [
+            {
+                "identifier": "Apache-2.0",
+                "name": "Apache License 2.0",
+                "url": "https://www.apache.org/licenses/LICENSE-2.0"
+            }
+        ],
+        "scm": {
+            "url": "https://github.com/JetBrains/compose-jb"
+        }
+    },
+    {
+        "groupId": "org.jetbrains.compose.ui",
+        "artifactId": "ui-graphics-desktop",
+        "version": "1.5.1",
+        "name": "Compose Graphics",
+        "spdxLicenses": [
+            {
+                "identifier": "Apache-2.0",
+                "name": "Apache License 2.0",
+                "url": "https://www.apache.org/licenses/LICENSE-2.0"
+            }
+        ],
+        "scm": {
+            "url": "https://github.com/JetBrains/compose-jb"
+        }
+    },
+    {
+        "groupId": "org.jetbrains.compose.ui",
+        "artifactId": "ui-text",
+        "version": "1.5.1",
+        "name": "Compose UI Text",
+        "spdxLicenses": [
+            {
+                "identifier": "Apache-2.0",
+                "name": "Apache License 2.0",
+                "url": "https://www.apache.org/licenses/LICENSE-2.0"
+            }
+        ],
+        "scm": {
+            "url": "https://github.com/JetBrains/compose-jb"
+        }
+    },
+    {
+        "groupId": "org.jetbrains.compose.ui",
+        "artifactId": "ui-text-desktop",
+        "version": "1.5.1",
+        "name": "Compose UI Text",
+        "spdxLicenses": [
+            {
+                "identifier": "Apache-2.0",
+                "name": "Apache License 2.0",
+                "url": "https://www.apache.org/licenses/LICENSE-2.0"
+            }
+        ],
+        "scm": {
+            "url": "https://github.com/JetBrains/compose-jb"
+        }
+    },
+    {
+        "groupId": "org.jetbrains.compose.ui",
+        "artifactId": "ui-tooling-preview",
+        "version": "1.5.1",
+        "name": "Compose UI Preview Tooling",
+        "spdxLicenses": [
+            {
+                "identifier": "Apache-2.0",
+                "name": "Apache License 2.0",
+                "url": "https://www.apache.org/licenses/LICENSE-2.0"
+            }
+        ],
+        "scm": {
+            "url": "https://github.com/JetBrains/compose-jb"
+        }
+    },
+    {
+        "groupId": "org.jetbrains.compose.ui",
+        "artifactId": "ui-tooling-preview-desktop",
+        "version": "1.5.1",
+        "name": "Compose UI Preview Tooling",
+        "spdxLicenses": [
+            {
+                "identifier": "Apache-2.0",
+                "name": "Apache License 2.0",
+                "url": "https://www.apache.org/licenses/LICENSE-2.0"
+            }
+        ],
+        "scm": {
+            "url": "https://github.com/JetBrains/compose-jb"
+        }
+    },
+    {
+        "groupId": "org.jetbrains.compose.ui",
+        "artifactId": "ui-unit",
+        "version": "1.5.1",
+        "name": "Compose Unit",
+        "spdxLicenses": [
+            {
+                "identifier": "Apache-2.0",
+                "name": "Apache License 2.0",
+                "url": "https://www.apache.org/licenses/LICENSE-2.0"
+            }
+        ],
+        "scm": {
+            "url": "https://github.com/JetBrains/compose-jb"
+        }
+    },
+    {
+        "groupId": "org.jetbrains.compose.ui",
+        "artifactId": "ui-unit-desktop",
+        "version": "1.5.1",
+        "name": "Compose Unit",
+        "spdxLicenses": [
+            {
+                "identifier": "Apache-2.0",
+                "name": "Apache License 2.0",
+                "url": "https://www.apache.org/licenses/LICENSE-2.0"
+            }
+        ],
+        "scm": {
+            "url": "https://github.com/JetBrains/compose-jb"
+        }
+    },
+    {
+        "groupId": "org.jetbrains.kotlin",
+        "artifactId": "kotlin-stdlib",
+        "version": "1.9.10",
+        "name": "Kotlin Stdlib",
+        "spdxLicenses": [
+            {
+                "identifier": "Apache-2.0",
+                "name": "Apache License 2.0",
+                "url": "https://www.apache.org/licenses/LICENSE-2.0"
+            }
+        ],
+        "scm": {
+            "url": "https://github.com/JetBrains/kotlin"
+        }
+    },
+    {
+        "groupId": "org.jetbrains.kotlin",
+        "artifactId": "kotlin-stdlib-jdk7",
+        "version": "1.9.10",
+        "name": "Kotlin Stdlib Jdk7",
+        "spdxLicenses": [
+            {
+                "identifier": "Apache-2.0",
+                "name": "Apache License 2.0",
+                "url": "https://www.apache.org/licenses/LICENSE-2.0"
+            }
+        ],
+        "scm": {
+            "url": "https://github.com/JetBrains/kotlin"
+        }
+    },
+    {
+        "groupId": "org.jetbrains.kotlin",
+        "artifactId": "kotlin-stdlib-jdk8",
+        "version": "1.9.10",
+        "name": "Kotlin Stdlib Jdk8",
+        "spdxLicenses": [
+            {
+                "identifier": "Apache-2.0",
+                "name": "Apache License 2.0",
+                "url": "https://www.apache.org/licenses/LICENSE-2.0"
+            }
+        ],
+        "scm": {
+            "url": "https://github.com/JetBrains/kotlin"
+        }
+    },
+    {
+        "groupId": "org.jetbrains.kotlinx",
+        "artifactId": "kotlinx-coroutines-bom",
+        "version": "1.6.4",
+        "name": "kotlinx-coroutines-bom",
+        "spdxLicenses": [
+            {
+                "identifier": "Apache-2.0",
+                "name": "Apache License 2.0",
+                "url": "https://www.apache.org/licenses/LICENSE-2.0"
+            }
+        ],
+        "scm": {
+            "url": "https://github.com/Kotlin/kotlinx.coroutines"
+        }
+    },
+    {
+        "groupId": "org.jetbrains.kotlinx",
+        "artifactId": "kotlinx-coroutines-core",
+        "version": "1.6.4",
+        "name": "kotlinx-coroutines-core",
+        "spdxLicenses": [
+            {
+                "identifier": "Apache-2.0",
+                "name": "Apache License 2.0",
+                "url": "https://www.apache.org/licenses/LICENSE-2.0"
+            }
+        ],
+        "scm": {
+            "url": "https://github.com/Kotlin/kotlinx.coroutines"
+        }
+    },
+    {
+        "groupId": "org.jetbrains.kotlinx",
+        "artifactId": "kotlinx-coroutines-core-jvm",
+        "version": "1.6.4",
+        "name": "kotlinx-coroutines-core",
+        "spdxLicenses": [
+            {
+                "identifier": "Apache-2.0",
+                "name": "Apache License 2.0",
+                "url": "https://www.apache.org/licenses/LICENSE-2.0"
+            }
+        ],
+        "scm": {
+            "url": "https://github.com/Kotlin/kotlinx.coroutines"
+        }
+    },
+    {
+        "groupId": "org.jetbrains.skiko",
+        "artifactId": "skiko",
+        "version": "0.7.77",
+        "name": "Skiko MPP",
+        "spdxLicenses": [
+            {
+                "identifier": "Apache-2.0",
+                "name": "Apache License 2.0",
+                "url": "https://www.apache.org/licenses/LICENSE-2.0"
+            }
+        ],
+        "scm": {
+            "url": "https://www.github.com/JetBrains/skiko"
+        }
+    },
+    {
+        "groupId": "org.jetbrains.skiko",
+        "artifactId": "skiko-awt",
+        "version": "0.7.77",
+        "name": "Skiko Awt",
+        "spdxLicenses": [
+            {
+                "identifier": "Apache-2.0",
+                "name": "Apache License 2.0",
+                "url": "https://www.apache.org/licenses/LICENSE-2.0"
+            }
+        ],
+        "scm": {
+            "url": "https://www.github.com/JetBrains/skiko"
+        }
+    }
+]

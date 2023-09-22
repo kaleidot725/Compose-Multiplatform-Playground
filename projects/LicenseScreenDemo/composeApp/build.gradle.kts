@@ -1,9 +1,11 @@
+import com.android.build.gradle.internal.tasks.factory.dependsOn
 import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 
 plugins {
     alias(libs.plugins.multiplatform)
     alias(libs.plugins.compose)
     alias(libs.plugins.android.application)
+    alias(libs.plugins.licensee)
 }
 
 @OptIn(org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi::class)
@@ -108,3 +110,41 @@ compose.desktop {
         }
     }
 }
+
+enum class LicenseFile(
+    val from: File, val to: File
+) {
+    Android(
+        from = File("composeApp/build/reports/licensee/androidRelease/artifacts.json"),
+        to = File("composeApp/src/commonMain/resources/licensee/android/artifacts.json")
+    ),
+    IOSX64(
+        from = File("composeApp/build/reports/licensee/iosX64/artifacts.json"),
+        to = File("composeApp/src/commonMain/resources/licensee/iosX64/artifacts.json"),
+    ),
+    IOSArm64(
+        from = File("composeApp/build/reports/licensee/iosArm64/artifacts.json"),
+        to = File("composeApp/src/commonMain/resources/licensee/iosArm64/artifacts.json"),
+    ),
+    IOSSimulatorArm64(
+        from = File("composeApp/build/reports/licensee/iosSimulatorArm64/artifacts.json"),
+        to = File("composeApp/src/commonMain/resources/licensee/iosSimulatorArm64/artifacts.json"),
+    ),
+    JVM(
+        from = File("composeApp/build/reports/licensee/desktop/artifacts.json"),
+        to = File("composeApp/src/commonMain/resources/licensee/desktop/artifacts.json"),
+    )
+}
+
+licensee {
+    allow("Apache-2.0")
+    allow("MIT")
+}
+
+tasks.register("updateLicense") {
+    doFirst {
+        LicenseFile.values().forEach { item ->
+            item.from.copyTo(item.to, true)
+        }
+    }
+}.dependsOn(tasks.check)

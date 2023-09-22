@@ -6,6 +6,7 @@ compose = "1.5.1"
 androidx-appcompat = "1.6.1"
 androidx-activityCompose = "1.7.2"
 compose-uitooling = "1.5.1"
+licensee="1.7.0"
 
 [libraries]
 
@@ -18,3 +19,4 @@ compose-uitooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "
 multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 compose = { id = "org.jetbrains.compose", version.ref = "compose" }
 android-application = { id = "com.android.application", version.ref = "agp" }
+licensee = { id = "app.cash.licensee", version.ref = "licensee"}
