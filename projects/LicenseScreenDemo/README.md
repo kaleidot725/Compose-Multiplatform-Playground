@@ -4,7 +4,7 @@
 
 ## About
 
-- This demo is creating a license file using licensee.
+- This demo is creating a license file using [licensee](https://github.com/cashapp/licensee).
 - This demo defines a gradle task called `updateLicense`, `updateLicense` generate and install `artifact.json` file.
 - This app displays the license list using the `artifact.json` file.
 
