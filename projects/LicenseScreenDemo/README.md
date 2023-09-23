@@ -1,5 +1,6 @@
 # License Screen Demo
 
+![image](https://github.com/kaleidot725/Compose-Multiplatform-Playground/assets/23740796/947e31af-01f2-4008-ae73-fcb76fef615d)
 
 ## About
 
