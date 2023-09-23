@@ -2,8 +2,8 @@
     {
         "groupId": "org.jetbrains",
         "artifactId": "annotations",
-        "version": "13.0",
-        "name": "IntelliJ IDEA Annotations",
+        "version": "23.0.0",
+        "name": "JetBrains Java Annotations",
         "spdxLicenses": [
             {
                 "identifier": "Apache-2.0",
@@ -12,7 +12,7 @@
             }
         ],
         "scm": {
-            "url": "https://github.com/JetBrains/intellij-community"
+            "url": "https://github.com/JetBrains/java-annotations"
         }
     },
     {
@@ -658,7 +658,7 @@
     {
         "groupId": "org.jetbrains.kotlinx",
         "artifactId": "kotlinx-coroutines-bom",
-        "version": "1.6.4",
+        "version": "1.7.3",
         "name": "kotlinx-coroutines-bom",
         "spdxLicenses": [
             {
@@ -674,7 +674,7 @@
     {
         "groupId": "org.jetbrains.kotlinx",
         "artifactId": "kotlinx-coroutines-core",
-        "version": "1.6.4",
+        "version": "1.7.3",
         "name": "kotlinx-coroutines-core",
         "spdxLicenses": [
             {
@@ -690,7 +690,7 @@
     {
         "groupId": "org.jetbrains.kotlinx",
         "artifactId": "kotlinx-coroutines-core-jvm",
-        "version": "1.6.4",
+        "version": "1.7.3",
         "name": "kotlinx-coroutines-core",
         "spdxLicenses": [
             {
@@ -701,6 +701,102 @@
         ],
         "scm": {
             "url": "https://github.com/Kotlin/kotlinx.coroutines"
+        }
+    },
+    {
+        "groupId": "org.jetbrains.kotlinx",
+        "artifactId": "kotlinx-coroutines-swing",
+        "version": "1.7.3",
+        "name": "kotlinx-coroutines-swing",
+        "spdxLicenses": [
+            {
+                "identifier": "Apache-2.0",
+                "name": "Apache License 2.0",
+                "url": "https://www.apache.org/licenses/LICENSE-2.0"
+            }
+        ],
+        "scm": {
+            "url": "https://github.com/Kotlin/kotlinx.coroutines"
+        }
+    },
+    {
+        "groupId": "org.jetbrains.kotlinx",
+        "artifactId": "kotlinx-serialization-bom",
+        "version": "1.5.1",
+        "name": "kotlinx-serialization-bom",
+        "spdxLicenses": [
+            {
+                "identifier": "Apache-2.0",
+                "name": "Apache License 2.0",
+                "url": "https://www.apache.org/licenses/LICENSE-2.0"
+            }
+        ],
+        "scm": {
+            "url": "https://github.com/Kotlin/kotlinx.serialization"
+        }
+    },
+    {
+        "groupId": "org.jetbrains.kotlinx",
+        "artifactId": "kotlinx-serialization-core",
+        "version": "1.5.1",
+        "name": "kotlinx-serialization-core",
+        "spdxLicenses": [
+            {
+                "identifier": "Apache-2.0",
+                "name": "Apache License 2.0",
+                "url": "https://www.apache.org/licenses/LICENSE-2.0"
+            }
+        ],
+        "scm": {
+            "url": "https://github.com/Kotlin/kotlinx.serialization"
+        }
+    },
+    {
+        "groupId": "org.jetbrains.kotlinx",
+        "artifactId": "kotlinx-serialization-core-jvm",
+        "version": "1.5.1",
+        "name": "kotlinx-serialization-core",
+        "spdxLicenses": [
+            {
+                "identifier": "Apache-2.0",
+                "name": "Apache License 2.0",
+                "url": "https://www.apache.org/licenses/LICENSE-2.0"
+            }
+        ],
+        "scm": {
+            "url": "https://github.com/Kotlin/kotlinx.serialization"
+        }
+    },
+    {
+        "groupId": "org.jetbrains.kotlinx",
+        "artifactId": "kotlinx-serialization-json",
+        "version": "1.5.1",
+        "name": "kotlinx-serialization-json",
+        "spdxLicenses": [
+            {
+                "identifier": "Apache-2.0",
+                "name": "Apache License 2.0",
+                "url": "https://www.apache.org/licenses/LICENSE-2.0"
+            }
+        ],
+        "scm": {
+            "url": "https://github.com/Kotlin/kotlinx.serialization"
+        }
+    },
+    {
+        "groupId": "org.jetbrains.kotlinx",
+        "artifactId": "kotlinx-serialization-json-jvm",
+        "version": "1.5.1",
+        "name": "kotlinx-serialization-json",
+        "spdxLicenses": [
+            {
+                "identifier": "Apache-2.0",
+                "name": "Apache License 2.0",
+                "url": "https://www.apache.org/licenses/LICENSE-2.0"
+            }
+        ],
+        "scm": {
+            "url": "https://github.com/Kotlin/kotlinx.serialization"
         }
     },
     {

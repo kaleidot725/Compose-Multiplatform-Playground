@@ -31,33 +31,6 @@ class AndroidApp : Application() {
 class AppActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val systemBarColor = Color.TRANSPARENT
-        setContent {
-            val view = LocalView.current
-            var isLightStatusBars by remember { mutableStateOf(false) }
-            if (!view.isInEditMode) {
-                LaunchedEffect(isLightStatusBars) {
-                    val window = (view.context as Activity).window
-                    WindowCompat.setDecorFitsSystemWindows(window, false)
-                    window.statusBarColor = systemBarColor
-                    window.navigationBarColor = systemBarColor
-                    WindowCompat.getInsetsController(window, window.decorView).apply {
-                        isAppearanceLightStatusBars = isLightStatusBars
-                        isAppearanceLightNavigationBars = isLightStatusBars
-                    }
-                }
-            }
-            App(systemAppearance = { isLight -> isLightStatusBars = isLight })
-        }
+        setContent { App() }
     }
-}
-
-internal actual fun openUrl(url: String?) {
-    val uri = url?.let { Uri.parse(it) } ?: return
-    val intent = Intent().apply {
-        action = Intent.ACTION_VIEW
-        data = uri
-        addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-    }
-    AndroidApp.INSTANCE.startActivity(intent)
 }
