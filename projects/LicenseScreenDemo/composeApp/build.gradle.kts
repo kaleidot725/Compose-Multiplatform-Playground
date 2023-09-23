@@ -39,13 +39,13 @@ kotlin {
                 optIn("org.jetbrains.compose.resources.ExperimentalResourceApi")
             }
         }
+
         val commonMain by getting {
             dependencies {
                 implementation(compose.runtime)
                 implementation(compose.material3)
                 @OptIn(org.jetbrains.compose.ExperimentalComposeLibrary::class)
                 implementation(compose.components.resources)
-
                 implementation(libs.kotlinx.serialization.json)
                 implementation(libs.kotlinx.coroutines.core)
             }
@@ -78,7 +78,6 @@ kotlin {
             dependencies {
             }
         }
-
     }
 }
 
@@ -108,7 +107,6 @@ android {
 compose.desktop {
     application {
         mainClass = "MainKt"
-
         nativeDistributions {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
             packageName = "jp.kaleidot725.sample.license.desktopApp"

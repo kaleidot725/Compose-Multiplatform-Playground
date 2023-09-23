@@ -12,24 +12,14 @@ struct iosApp: App {
 }
 
 struct ContentView: View {
-    @State private var colorScheme: ColorScheme = .dark
     var body: some View {
-        ComposeView()
-            .ignoresSafeArea(.all)
-            .preferredColorScheme(colorScheme)
+        ComposeView().ignoresSafeArea(.all)
     }
 }
 
 struct ComposeView: UIViewControllerRepresentable {
-    var setScheme: (ColorScheme) -> Void
-    init(setScheme: @escaping (ColorScheme) -> Void) {
-        self.setScheme = setScheme
-    }
-
     func makeUIViewController(context: Context) -> UIViewController {
-        MainKt.MainViewController { isLight in
-            setScheme(isLight.boolValue ? .light : .dark)
-        }
+        MainKt.MainViewController()
     }
 
     func updateUIViewController(_ uiViewController: UIViewController, context: Context) {}
