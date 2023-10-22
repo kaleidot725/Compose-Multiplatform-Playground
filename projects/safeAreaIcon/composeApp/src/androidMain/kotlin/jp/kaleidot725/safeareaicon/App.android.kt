@@ -17,14 +17,7 @@ class AppActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            var isDark by remember { mutableStateOf(false) }
-            App(
-                isDark = isDark,
-                onChangeDarkMode = {
-                    changeStatusBarColor(it)
-                    isDark = it
-                }
-            )
+            App(onChangeDarkMode = { changeStatusBarColor(it) })
         }
     }
 

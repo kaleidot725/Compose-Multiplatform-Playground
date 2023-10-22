@@ -33,14 +33,7 @@ class MainUIViewController : UIViewController {
         }
 
     private val childComposeViewController = ComposeUIViewController {
-        var isDark by remember { mutableStateOf(enableDarkStatusBar) }
-        App(
-            isDark = isDark,
-            onChangeDarkMode = {
-                isDark = it
-                enableDarkStatusBar = it
-            },
-        )
+        App(onChangeDarkMode = { isDark -> enableDarkStatusBar = isDark })
     }
 
     /**
