@@ -1,16 +1,14 @@
 package jp.kaleidot725.safeareaicon
 
-import android.app.Activity
 import android.app.Application
-import android.content.Intent
 import android.graphics.Color
-import android.net.Uri
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.ui.platform.LocalView
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.core.view.WindowCompat
 
 class AndroidApp : Application()
@@ -19,17 +17,20 @@ class AppActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            App()
+            var isDark by remember { mutableStateOf(false) }
+            App(
+                isDark = isDark,
+                onChangeDarkMode = {
+                    changeStatusBarColor(it)
+                    isDark = it
+                }
+            )
         }
     }
-}
 
-@Composable
-actual fun StatusBarIcon(isDark: Boolean) {
-    val view = LocalView.current
-    val systemBarColor = if(isDark) Color.BLACK else Color.WHITE
-    LaunchedEffect(isDark) {
-        val window = (view.context as Activity).window
+    private fun changeStatusBarColor(isDark: Boolean) {
+        val window = this.window
+        val systemBarColor = if (isDark) Color.BLACK else Color.WHITE
         window.statusBarColor = systemBarColor
         window.navigationBarColor = systemBarColor
         WindowCompat.getInsetsController(window, window.decorView).apply {
