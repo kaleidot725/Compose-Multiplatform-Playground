@@ -33,7 +33,7 @@ internal fun App(onChangeDarkMode: (Boolean) -> Unit) {
                 IconButton(
                     onClick = {
                         isDark = !isDark
-                        onChangeDarkMode(!isDark)
+                        onChangeDarkMode(isDark)
                     }
                 ) {
                     Icon(

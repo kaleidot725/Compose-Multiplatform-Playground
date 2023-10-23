@@ -1,9 +1,5 @@
 package jp.kaleidot725.safeareaicon
 
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.window.ComposeUIViewController
 import platform.Foundation.NSCoder
 import platform.UIKit.UIStatusBarStyle
@@ -26,21 +22,21 @@ class MainUIViewController : UIViewController {
     /**
      * isDarkの状態を変更したら、StatusBarのアップデートを要求する
      */
-    private var enableDarkStatusBar: Boolean = false
+    private var isDark: Boolean = false
         set(value) {
             field = value
             setNeedsStatusBarAppearanceUpdate()
         }
 
     private val childComposeViewController = ComposeUIViewController {
-        App(onChangeDarkMode = { isDark -> enableDarkStatusBar = isDark })
+        App(onChangeDarkMode = { isDark -> this.isDark = isDark })
     }
 
     /**
      * isDarkの状態によって、StatusBarStyleが変化するようにする
      */
     override fun preferredStatusBarStyle(): UIStatusBarStyle {
-        return if (enableDarkStatusBar) UIStatusBarStyleLightContent else UIStatusBarStyleDarkContent
+        return if (isDark)  UIStatusBarStyleLightContent else UIStatusBarStyleDarkContent
     }
 
     override fun loadView() {
