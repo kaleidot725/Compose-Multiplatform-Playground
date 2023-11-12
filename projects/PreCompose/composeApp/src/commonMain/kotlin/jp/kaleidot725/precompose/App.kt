@@ -6,6 +6,7 @@ import jp.kaleidot725.precompose.home.HomeScreen
 import jp.kaleidot725.precompose.home.HomeUiState
 import moe.tlaster.precompose.PreComposeApp
 import moe.tlaster.precompose.navigation.NavHost
+import moe.tlaster.precompose.navigation.path
 import moe.tlaster.precompose.navigation.rememberNavigator
 import moe.tlaster.precompose.navigation.transition.NavTransition
 
@@ -28,9 +29,9 @@ fun App() {
                 )
             }
 
-            scene(route = "/detail/{id}") { backStackEntry ->
-                val id: String = backStackEntry.pathMap["id"] ?: "UNKNOWN"
-                DetailsScreen(id)
+            scene(route = "/details/{id}") { backStackEntry ->
+                val id = backStackEntry.path<String>("id")
+                DetailsScreen(id ?: "UNKNOWN")
             }
         }
     }
