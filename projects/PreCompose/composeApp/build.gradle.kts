@@ -42,7 +42,6 @@ kotlin {
 
             // PreCompose
             implementation(libs.compose.precompose)
-            implementation(libs.compose.precompose.koin)
 
             // Koin
             implementation(libs.koin.core)
