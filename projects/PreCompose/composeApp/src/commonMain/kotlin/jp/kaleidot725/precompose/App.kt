@@ -24,7 +24,7 @@ fun App() {
                 navTransition = NavTransition(),
             ) {
                 HomeScreen(
-                    state = HomeUiState(listOf("TEST1", "TEST2", "TEST3", "TEST4")),
+                    state = HomeUiState(listOf("ONE", "TWO", "THREE", "FOUR")),
                     navigateDetails = { navigator.navigate("/details/$it") }
                 )
             }
