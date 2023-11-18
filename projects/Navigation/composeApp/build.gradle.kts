@@ -15,7 +15,7 @@ kotlin {
             }
         }
     }
-    
+
     listOf(
         iosX64(),
         iosArm64(),
@@ -26,9 +26,8 @@ kotlin {
             isStatic = true
         }
     }
-    
+
     sourceSets {
-        
         androidMain.dependencies {
             implementation(libs.compose.ui)
             implementation(libs.compose.ui.tooling.preview)
@@ -40,6 +39,15 @@ kotlin {
             implementation(compose.material)
             @OptIn(ExperimentalComposeLibrary::class)
             implementation(compose.components.resources)
+
+            // PreCompose
+            implementation(libs.compose.precompose)
+
+            // Voyager
+            implementation(libs.compose.voyager)
+
+            // Decompose Router
+            implementation(libs.decompose.router)
         }
     }
 }
