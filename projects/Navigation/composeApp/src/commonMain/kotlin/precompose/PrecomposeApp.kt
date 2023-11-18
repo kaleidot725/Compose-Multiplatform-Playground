@@ -2,10 +2,11 @@ package precompose
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import common.resource.Pictures
+import common.screen.GalleryContent
 
 @Composable
 fun PrecomposeApp() {
@@ -13,6 +14,6 @@ fun PrecomposeApp() {
         modifier = Modifier.fillMaxSize(),
         contentAlignment = Alignment.Center
     ) {
-        Text("PRECOMPOSE SCREEN")
+        GalleryContent(pictures = Pictures.value)
     }
 }

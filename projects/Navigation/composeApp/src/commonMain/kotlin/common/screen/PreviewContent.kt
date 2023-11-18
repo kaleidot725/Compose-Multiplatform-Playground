@@ -5,7 +5,7 @@ import androidx.compose.ui.Modifier
 import common.resource.Picture
 
 @Composable
-fun PreviewScreen(
+fun PreviewContent(
     picture: Picture,
     modifier: Modifier = Modifier
 ) {
