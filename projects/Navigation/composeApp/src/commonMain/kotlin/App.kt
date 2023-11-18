@@ -1,19 +1,19 @@
 import Mode.*
-import androidx.compose.foundation.BorderStroke
-import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Divider
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.*
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import decompose.DecomposeApp
+import precompose.PrecomposeApp
+import voyager.VoyagerApp
+import androidx.compose.runtime.Composable as Composable1
 
 enum class Mode {
     PRECOMPOSE,
@@ -21,36 +21,23 @@ enum class Mode {
     DECOMPOSE,
 }
 
-@Composable
+@Composable1
 fun App() {
     var mode by remember { mutableStateOf(PRECOMPOSE) }
     MaterialTheme {
         Column {
-            when (mode) {
-                PRECOMPOSE -> {
-                    Box(
-                        modifier = Modifier.weight(1.0f).fillMaxWidth(),
-                        contentAlignment = Alignment.Center
-                    ) {
-                        Text("PRECOMPOSE SCREEN")
+            Box(modifier = Modifier.weight(1.0f)) {
+                when (mode) {
+                    PRECOMPOSE -> {
+                        PrecomposeApp()
                     }
-                }
 
-                VOYAGER -> {
-                    Box(
-                        modifier = Modifier.weight(1.0f).fillMaxWidth(),
-                        contentAlignment = Alignment.Center
-                    ) {
-                        Text("VOYAGER SCREEN")
+                    VOYAGER -> {
+                        VoyagerApp()
                     }
-                }
 
-                DECOMPOSE -> {
-                    Box(
-                        modifier = Modifier.weight(1.0f).fillMaxWidth(),
-                        contentAlignment = Alignment.Center
-                    ) {
-                        Text("DECOMPOSE SCREEN")
+                    DECOMPOSE -> {
+                        DecomposeApp()
                     }
                 }
             }
