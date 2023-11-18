@@ -1,38 +1,76 @@
-import androidx.compose.animation.AnimatedVisibility
-import androidx.compose.foundation.Image
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.material.Button
+import Mode.*
+import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.background
+import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.*
+import androidx.compose.material.Divider
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import org.jetbrains.compose.resources.ExperimentalResourceApi
-import org.jetbrains.compose.resources.painterResource
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 
-@OptIn(ExperimentalResourceApi::class)
+enum class Mode {
+    PRECOMPOSE,
+    VOYAGER,
+    DECOMPOSE,
+}
+
 @Composable
 fun App() {
+    var mode by remember { mutableStateOf(PRECOMPOSE) }
     MaterialTheme {
-        var greetingText by remember { mutableStateOf("Hello World!") }
-        var showImage by remember { mutableStateOf(false) }
-        Column(Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
-            Button(onClick = {
-                greetingText = "Compose: ${Greeting().greet()}"
-                showImage = !showImage
-            }) {
-                Text(greetingText)
+        Column {
+            when (mode) {
+                PRECOMPOSE -> {
+                    Box(
+                        modifier = Modifier.weight(1.0f).fillMaxWidth(),
+                        contentAlignment = Alignment.Center
+                    ) {
+                        Text("PRECOMPOSE SCREEN")
+                    }
+                }
+
+                VOYAGER -> {
+                    Box(
+                        modifier = Modifier.weight(1.0f).fillMaxWidth(),
+                        contentAlignment = Alignment.Center
+                    ) {
+                        Text("VOYAGER SCREEN")
+                    }
+                }
+
+                DECOMPOSE -> {
+                    Box(
+                        modifier = Modifier.weight(1.0f).fillMaxWidth(),
+                        contentAlignment = Alignment.Center
+                    ) {
+                        Text("DECOMPOSE SCREEN")
+                    }
+                }
             }
-            AnimatedVisibility(showImage) {
-                Image(
-                    painterResource("compose-multiplatform.xml"),
-                    null
-                )
+
+            Divider()
+
+            Row {
+                Mode.entries.forEach {
+                    Text(
+                        text = it.name,
+                        fontSize = 12.sp,
+                        maxLines = 2,
+                        color = if (mode == it) Color.Red else Color.Black,
+                        textAlign = TextAlign.Center,
+                        modifier = Modifier
+                            .weight(1.0f)
+                            .clickable { mode = it }
+                            .padding(8.dp)
+                    )
+                }
             }
         }
     }
