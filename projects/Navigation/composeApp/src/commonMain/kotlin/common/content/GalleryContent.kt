@@ -5,9 +5,11 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
+import androidx.compose.material.Card
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -44,24 +46,26 @@ fun GalleryContent(
 @OptIn(ExperimentalResourceApi::class)
 @Composable
 private fun GalleryPictureCard(picture: Picture, modifier: Modifier = Modifier) {
-    Box(
-        modifier = modifier.background(Color.Black)
+    Card(
+        modifier = modifier.padding(8.dp)
     ) {
-        Image(
-            painter = painterResource(picture.source),
-            contentDescription = picture.name,
-            contentScale = ContentScale.Crop,
-            modifier = Modifier.align(Alignment.Center)
-        )
+        Box {
+            Image(
+                painter = painterResource(picture.source),
+                contentDescription = picture.name,
+                contentScale = ContentScale.Crop,
+                modifier = Modifier.align(Alignment.Center)
+            )
 
-        Text(
-            text = picture.name,
-            color = Color.White,
-            textAlign = TextAlign.Center,
-            modifier = Modifier
-                .fillMaxWidth()
-                .background(Color.Black)
-                .align(Alignment.BottomCenter)
-        )
+            Text(
+                text = picture.name,
+                color = Color.White,
+                textAlign = TextAlign.Center,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .background(Color.Black)
+                    .align(Alignment.BottomCenter)
+            )
+        }
     }
 }
