@@ -1,8 +1,12 @@
 package precompose
 
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import common.resource.Pictures
 import moe.tlaster.precompose.PreComposeApp
 import moe.tlaster.precompose.navigation.NavHost
@@ -42,22 +46,21 @@ fun PrecomposeApp() {
 
                 PreviewScreen(
                     picture = picture,
-                    onNavigateDetails = { navigator.navigate("/details/{name}") },
+                    onNavigateDetails = { navigator.navigate("/details/${it.name}") },
                     onBack = { navigator.popBackStack() },
                     modifier = Modifier.fillMaxSize()
                 )
             }
 
-            scene(
-                route = "/details/{name}",
-                navTransition = NavTransition(),
+            dialog(
+                route = "/details/{name}"
             ) { backStackEntry ->
                 val name = backStackEntry.path<String>("name")
-                val picture = Pictures.value.firstOrNull { it.name == name } ?: return@scene
+                val picture = Pictures.value.firstOrNull { it.name == name } ?: return@dialog
                 DetailsDialog(
                     picture = picture,
                     onBack = { navigator.popBackStack() },
-                    modifier = Modifier.fillMaxSize()
+                    modifier = Modifier.wrapContentSize()
                 )
             }
         }
