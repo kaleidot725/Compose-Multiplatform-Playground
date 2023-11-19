@@ -4,7 +4,11 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.material.Icon
+import androidx.compose.material.IconButton
 import androidx.compose.material.Text
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -19,6 +23,7 @@ import org.jetbrains.compose.resources.painterResource
 @Composable
 fun PreviewContent(
     picture: Picture,
+    onBack: () -> Unit,
     modifier: Modifier = Modifier
 ) {
     Box(
@@ -31,14 +36,30 @@ fun PreviewContent(
             modifier = Modifier.align(Alignment.Center)
         )
 
-        Text(
-            text = picture.name,
-            color = Color.White,
-            textAlign = TextAlign.Center,
+        Box(
             modifier = Modifier
                 .fillMaxWidth()
                 .background(Color.Black)
                 .align(Alignment.TopCenter)
-        )
+        ) {
+            IconButton(
+                onClick = onBack,
+                modifier = Modifier.align(Alignment.CenterStart)
+            ) {
+                Icon(
+                    imageVector = Icons.Filled.ArrowBack,
+                    contentDescription = "back"
+                )
+            }
+
+            Text(
+                text = picture.name,
+                color = Color.White,
+                textAlign = TextAlign.Center,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .align(Alignment.Center)
+            )
+        }
     }
 }

@@ -14,6 +14,9 @@ fun PrecomposeApp() {
         modifier = Modifier.fillMaxSize(),
         contentAlignment = Alignment.Center
     ) {
-        GalleryContent(pictures = Pictures.value)
+        GalleryContent(
+            pictures = Pictures.value,
+            onClick = {}
+        )
     }
 }

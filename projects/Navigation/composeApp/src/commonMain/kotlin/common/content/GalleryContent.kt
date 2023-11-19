@@ -2,6 +2,7 @@ package common.content
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -25,6 +26,7 @@ import org.jetbrains.compose.resources.painterResource
 @Composable
 fun GalleryContent(
     pictures: List<Picture>,
+    onClick: (Picture) -> Unit,
     modifier: Modifier = Modifier
 ) {
     LazyVerticalGrid(
@@ -37,7 +39,8 @@ fun GalleryContent(
         ) { picture ->
             GalleryPictureCard(
                 picture = picture,
-                modifier = Modifier.height(250.dp)
+                onClick = onClick,
+                modifier = Modifier.height(250.dp),
             )
         }
     }
@@ -45,9 +48,11 @@ fun GalleryContent(
 
 @OptIn(ExperimentalResourceApi::class)
 @Composable
-private fun GalleryPictureCard(picture: Picture, modifier: Modifier = Modifier) {
+private fun GalleryPictureCard(picture: Picture, onClick: (Picture) -> Unit, modifier: Modifier = Modifier) {
     Card(
-        modifier = modifier.padding(8.dp)
+        modifier = modifier
+            .padding(8.dp)
+            .clickable { onClick(picture) }
     ) {
         Box {
             Image(
@@ -64,7 +69,7 @@ private fun GalleryPictureCard(picture: Picture, modifier: Modifier = Modifier) 
                 modifier = Modifier
                     .fillMaxWidth()
                     .background(Color.Black)
-                    .align(Alignment.BottomCenter)
+                    .align(Alignment.TopCenter)
             )
         }
     }
