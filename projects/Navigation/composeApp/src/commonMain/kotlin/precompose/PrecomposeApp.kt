@@ -6,7 +6,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import common.resource.Pictures
-import common.screen.GalleryContent
+import common.content.GalleryContent
 
 @Composable
 fun PrecomposeApp() {

@@ -61,7 +61,7 @@ private fun GalleryPictureCard(picture: Picture, modifier: Modifier = Modifier) 
             modifier = Modifier
                 .fillMaxWidth()
                 .background(Color.Black)
-                .align(Alignment.TopCenter)
+                .align(Alignment.BottomCenter)
         )
     }
 }
