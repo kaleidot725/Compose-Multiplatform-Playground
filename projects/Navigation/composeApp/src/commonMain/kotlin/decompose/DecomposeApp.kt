@@ -2,8 +2,7 @@ package decompose
 
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.wrapContentSize
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import com.arkivanov.decompose.router.stack.pop
 import com.arkivanov.decompose.router.stack.push
@@ -13,9 +12,7 @@ import common.resource.Pictures
 import decompose.screen.DetailsDialog
 import decompose.screen.GalleryScreen
 import decompose.screen.PreviewScreen
-import io.github.xxfast.decompose.router.LocalRouterContext
 import io.github.xxfast.decompose.router.Router
-import io.github.xxfast.decompose.router.RouterContext
 import io.github.xxfast.decompose.router.content.RoutedContent
 import io.github.xxfast.decompose.router.rememberRouter
 
@@ -23,7 +20,6 @@ import io.github.xxfast.decompose.router.rememberRouter
 sealed class Screens : Parcelable {
     data object Gallery : Screens()
     data class Preview(val name: String) : Screens()
-    data class Details(val name: String) : Screens()
 }
 
 @Composable
@@ -41,21 +37,22 @@ fun DecomposeApp() {
 
             is Screens.Preview -> {
                 val picture = Pictures.value.firstOrNull { it.name == screen.name } ?: return@RoutedContent
+                var isShowDetails by remember { mutableStateOf(false) }
+
                 PreviewScreen(
                     picture = picture,
-                    onNavigateDetails = { router.push(Screens.Details(it.name)) },
+                    onNavigateDetails = { isShowDetails = true },
                     onBack = { router.pop() },
                     modifier = Modifier.fillMaxSize()
                 )
-            }
 
-            is Screens.Details -> {
-                val picture = Pictures.value.firstOrNull { it.name == screen.name } ?: return@RoutedContent
-                DetailsDialog(
-                    picture = picture,
-                    onBack = { router.pop() },
-                    modifier = Modifier.wrapContentSize()
-                )
+                if (isShowDetails) {
+                    DetailsDialog(
+                        picture = picture,
+                        onBack = { isShowDetails = false },
+                        modifier = Modifier.wrapContentSize()
+                    )
+                }
             }
         }
     }
