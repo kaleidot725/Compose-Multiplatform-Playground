@@ -3,6 +3,7 @@ package decompose
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.Modifier
 import com.arkivanov.decompose.router.stack.pop
 import com.arkivanov.decompose.router.stack.push
@@ -12,7 +13,9 @@ import common.resource.Pictures
 import decompose.screen.DetailsDialog
 import decompose.screen.GalleryScreen
 import decompose.screen.PreviewScreen
+import io.github.xxfast.decompose.router.LocalRouterContext
 import io.github.xxfast.decompose.router.Router
+import io.github.xxfast.decompose.router.RouterContext
 import io.github.xxfast.decompose.router.content.RoutedContent
 import io.github.xxfast.decompose.router.rememberRouter
 
