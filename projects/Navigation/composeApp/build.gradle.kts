@@ -5,6 +5,7 @@ plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsCompose)
+    id("kotlin-parcelize")
 }
 
 kotlin {
@@ -48,6 +49,10 @@ kotlin {
 
             // Decompose Router
             implementation(libs.decompose.router)
+            implementation(libs.decompose.core)
+            implementation(libs.decompose.compose.multiplatform)
+            // Parcelable
+            implementation(libs.essenty.parcelable)
         }
     }
 }
