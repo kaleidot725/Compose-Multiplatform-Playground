@@ -25,6 +25,7 @@ kotlin {
         iosTarget.binaries.framework {
             baseName = "ComposeApp"
             isStatic = true
+            export(libs.decompose.router)
         }
     }
 
@@ -48,7 +49,7 @@ kotlin {
             implementation(libs.compose.voyager)
 
             // Decompose Router
-            implementation(libs.decompose.router)
+            api(libs.decompose.router)
             implementation(libs.decompose.core)
             implementation(libs.decompose.compose.multiplatform)
             // Parcelable

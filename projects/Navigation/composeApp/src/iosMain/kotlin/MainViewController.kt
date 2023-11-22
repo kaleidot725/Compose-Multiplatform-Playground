@@ -1,11 +1,10 @@
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.window.ComposeUIViewController
-import platform.UIKit.UIViewController
 import io.github.xxfast.decompose.router.LocalRouterContext
-import io.github.xxfast.decompose.router.defaultRouterContext
+import io.github.xxfast.decompose.router.RouterContext
+import platform.UIKit.UIViewController
 
-fun HomeUIViewController(): UIViewController = ComposeUIViewController {
-    val routerContext = defaultRouterContext()
+fun MainViewController(routerContext: RouterContext): UIViewController = ComposeUIViewController {
     CompositionLocalProvider(LocalRouterContext provides routerContext) {
         App()
     }
