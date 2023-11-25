@@ -18,7 +18,7 @@ import precompose.screen.GalleryScreen
 import precompose.screen.PreviewScreen
 
 @Composable
-fun PrecomposeApp() {
+fun PrecomposeDemo() {
     PreComposeApp {
         val navigator = rememberNavigator()
         NavHost(

@@ -10,6 +10,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import decompose.DecomposeApp
 import precompose.PrecomposeApp
+import precompose.PrecomposeDemo
 import voyager.VoyagerApp
 import androidx.compose.runtime.Composable as Composable1
 
@@ -46,7 +47,7 @@ fun App() {
                 Box(modifier = Modifier.weight(1.0f)) {
                     when (mode) {
                         PRECOMPOSE -> {
-                            PrecomposeApp()
+                            PrecomposeDemo()
                         }
 
                         VOYAGER -> {
