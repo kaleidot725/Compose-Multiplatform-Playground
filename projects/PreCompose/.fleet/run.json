@@ -1,0 +1,12 @@
+{
+    "configurations": [
+        {
+            "name": "androidApp",
+            "type": "android-app",
+            "workingDir": "$PROJECT_DIR$",
+            "allowParallelRun": true,
+            "module": "projects.PreCompose.composeApp.main",
+            "destination": "Medium Phone API 34"
+        }
+    ]
+}
