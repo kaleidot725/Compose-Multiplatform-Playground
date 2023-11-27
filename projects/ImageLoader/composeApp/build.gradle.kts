@@ -43,6 +43,9 @@ kotlin {
 
             // Kamel
             implementation(libs.kamel)
+
+            // ImageLoader
+            implementation(libs.imageloader)
         }
     }
 }
