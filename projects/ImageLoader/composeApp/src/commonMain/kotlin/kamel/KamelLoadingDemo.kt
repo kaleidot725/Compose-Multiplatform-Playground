@@ -16,14 +16,13 @@ import io.kamel.image.config.LocalKamelConfig
 
 @Composable
 fun KamelLoadingDemo() {
-    val kamelConfig = LocalKamelConfig.current
     Box(
         modifier = Modifier
             .fillMaxSize()
             .background(Color.Black)
     ) {
         KamelImage(
-            resource = asyncPainterResource(Resource.sampleImage),
+            resource = asyncPainterResource(data = Resource.sampleImage),
             contentDescription = "sample",
             modifier = Modifier.fillMaxSize(),
             onLoading = { CircularProgressIndicator(modifier = Modifier.size(128.dp)) }
