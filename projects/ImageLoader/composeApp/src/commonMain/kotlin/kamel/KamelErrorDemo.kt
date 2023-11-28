@@ -26,14 +26,14 @@ fun KamelErrorDemo() {
             .background(Color.Black)
     ) {
         KamelImage(
-            resource = asyncPainterResource(data = Resource.sampleErrorImage),
+            resource = asyncPainterResource(data = ImageResource.sampleErrorImage),
             contentDescription = "sample",
             contentScale = ContentScale.Crop,
             modifier = Modifier.size(200.dp),
             onLoading = { CircularProgressIndicator(modifier = Modifier.size(128.dp)) },
             onFailure = {
                 Image(
-                    painter = painterResource(Resource.error),
+                    painter = painterResource(ImageResource.error),
                     contentDescription = null,
                     modifier = Modifier.size(200.dp),
                 )

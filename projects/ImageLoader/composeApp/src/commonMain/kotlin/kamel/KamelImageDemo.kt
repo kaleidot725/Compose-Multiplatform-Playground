@@ -1,6 +1,6 @@
 package kamel
 
-import Resource
+import ImageResource
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -21,7 +21,7 @@ fun KamelImageDemo() {
             .background(Color.Black)
     ) {
         KamelImage(
-            resource = asyncPainterResource(Resource.sampleImage),
+            resource = asyncPainterResource(ImageResource.sampleImage),
             contentDescription = "sample",
             contentScale = ContentScale.Crop,
             modifier = Modifier.size(200.dp),

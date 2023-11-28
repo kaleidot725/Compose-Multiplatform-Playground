@@ -1,16 +1,11 @@
 package kamel
 
-import androidx.compose.animation.*
-import androidx.compose.animation.core.Spring
-import androidx.compose.animation.core.spring
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.size
-import androidx.compose.material.CircularProgressIndicator
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -30,42 +25,42 @@ fun KamelCrossfadeDemo() {
             .background(Color.Black)
     ) {
         KamelImage(
-            resource = asyncPainterResource(data = Resource.sampleImage),
+            resource = asyncPainterResource(data = ImageResource.sampleImage),
             contentDescription = "sample",
             contentScale = ContentScale.Crop,
             modifier = Modifier.size(200.dp),
             animationSpec = tween(durationMillis = 2000),
             onLoading = {
                 Image(
-                    painter = painterResource(Resource.placeholder),
+                    painter = painterResource(ImageResource.placeholder),
                     contentDescription = null,
                     modifier = Modifier.size(500.dp)
                 )
             },
             onFailure = {
                 Image(
-                    painter = painterResource(Resource.error),
+                    painter = painterResource(ImageResource.error),
                     contentDescription = null,
                     modifier = Modifier.size(500.dp)
                 )
             }
         )
         KamelImage(
-            resource = asyncPainterResource(data = Resource.sampleErrorImage),
+            resource = asyncPainterResource(data = ImageResource.sampleErrorImage),
             contentDescription = "sample",
             contentScale = ContentScale.Crop,
             modifier = Modifier.size(200.dp),
             animationSpec = tween(durationMillis = 2000),
             onLoading = {
                 Image(
-                    painter = painterResource(Resource.placeholder),
+                    painter = painterResource(ImageResource.placeholder),
                     contentDescription = null,
                     modifier = Modifier.size(500.dp)
                 )
             },
             onFailure = {
                 Image(
-                    painter = painterResource(Resource.error),
+                    painter = painterResource(ImageResource.error),
                     contentDescription = null,
                     modifier = Modifier.size(500.dp)
                 )
