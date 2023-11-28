@@ -9,6 +9,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
 import io.kamel.image.KamelImage
 import io.kamel.image.asyncPainterResource
@@ -24,7 +25,8 @@ fun KamelLoadingDemo() {
         KamelImage(
             resource = asyncPainterResource(data = Resource.sampleImage),
             contentDescription = "sample",
-            modifier = Modifier.fillMaxSize(),
+            contentScale = ContentScale.Crop,
+            modifier = Modifier.size(200.dp),
             onLoading = { CircularProgressIndicator(modifier = Modifier.size(128.dp)) }
         )
     }

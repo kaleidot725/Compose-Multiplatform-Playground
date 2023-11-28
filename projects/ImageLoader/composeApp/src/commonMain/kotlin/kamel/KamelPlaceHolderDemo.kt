@@ -9,6 +9,7 @@ import androidx.compose.material.CircularProgressIndicator
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
 import io.kamel.image.KamelImage
 import io.kamel.image.asyncPainterResource
@@ -24,14 +25,15 @@ fun KamelPlaceHolderDemo() {
             .background(Color.Black)
     ) {
         KamelImage(
-            resource = asyncPainterResource(data= Resource.sampleErrorImage),
+            resource = asyncPainterResource(data = Resource.sampleImage),
             contentDescription = "sample",
-            modifier = Modifier.fillMaxSize(),
+            contentScale = ContentScale.Crop,
+            modifier = Modifier.size(200.dp),
             onLoading = {
                 Image(
-                    painter = painterResource(""),
+                    painter = painterResource(Resource.placeholder),
                     contentDescription = null,
-                    modifier = Modifier.fillMaxSize()
+                    modifier = Modifier.size(200.dp),
                 )
             }
         )
