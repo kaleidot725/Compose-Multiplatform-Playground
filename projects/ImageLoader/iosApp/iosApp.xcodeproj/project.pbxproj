@@ -32,6 +32,21 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		30B730AFB1C65FE25D253419 /* y_katsuragawa.xcuserdatad */ = {
+			isa = PBXGroup;
+			children = (
+				30B73A79EEBD114FB7F38717 /* xcschemes */,
+			);
+			path = y_katsuragawa.xcuserdatad;
+			sourceTree = "<group>";
+		};
+		30B73A79EEBD114FB7F38717 /* xcschemes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = xcschemes;
+			sourceTree = "<group>";
+		};
 		321E52074D8647F6C1BC3EAB /* project.xcworkspace */ = {
 			isa = PBXGroup;
 			children = (
@@ -53,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				321E54FDAEF5FCF4846DC922 /* katz.xcuserdatad */,
+				30B730AFB1C65FE25D253419 /* y_katsuragawa.xcuserdatad */,
 			);
 			name = xcuserdata;
 			path = iosApp.xcodeproj/xcuserdata;
