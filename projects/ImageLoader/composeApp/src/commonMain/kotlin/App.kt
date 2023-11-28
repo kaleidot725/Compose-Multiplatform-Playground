@@ -14,6 +14,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.material.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.unit.dp
+import kamel.KamelDemo
 
 private enum class Mode {
     KAMEL,
@@ -46,10 +47,7 @@ fun App() {
 
                 Box(modifier = Modifier.weight(1.0f)) {
                     when (mode) {
-                        Mode.KAMEL -> {
-                            Text("KAMEL")
-                        }
-
+                        Mode.KAMEL -> KamelDemo()
                         Mode.IMAGE_LOADER -> {
                             Text("IMAGE_LOADER")
                         }
