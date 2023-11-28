@@ -34,14 +34,14 @@ fun KamelCrossfadeDemo() {
                 Image(
                     painter = painterResource(ImageResource.placeholder),
                     contentDescription = null,
-                    modifier = Modifier.size(500.dp)
+                    modifier = Modifier.size(200.dp)
                 )
             },
             onFailure = {
                 Image(
                     painter = painterResource(ImageResource.error),
                     contentDescription = null,
-                    modifier = Modifier.size(500.dp)
+                    modifier = Modifier.size(200.dp)
                 )
             }
         )
@@ -55,14 +55,14 @@ fun KamelCrossfadeDemo() {
                 Image(
                     painter = painterResource(ImageResource.placeholder),
                     contentDescription = null,
-                    modifier = Modifier.size(500.dp)
+                    modifier = Modifier.size(200.dp)
                 )
             },
             onFailure = {
                 Image(
                     painter = painterResource(ImageResource.error),
                     contentDescription = null,
-                    modifier = Modifier.size(500.dp)
+                    modifier = Modifier.size(200.dp)
                 )
             }
         )

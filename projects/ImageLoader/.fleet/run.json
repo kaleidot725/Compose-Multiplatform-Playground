@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "type": "android-app",
+            "name": "AndroidApp",
+            "module": "imageloader.composeApp.main",
+            "destination": "Medium Phone API 34",
+        },
+    ]
+}

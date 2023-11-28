@@ -9,6 +9,8 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import com.seiko.imageloader.ImageLoader
+import com.seiko.imageloader.LocalImageLoader
 
 private enum class ImageLoaderDemoType {
     IMAGE,
@@ -19,41 +21,48 @@ private enum class ImageLoaderDemoType {
     ERROR_HANDLING,
 }
 
+expect fun generateImageLoader(): ImageLoader
+
 @Composable
 fun ImageLoaderDemo() {
     var type: ImageLoaderDemoType? by remember { mutableStateOf(null) }
-    Box(modifier = Modifier.fillMaxSize()) {
-        LazyColumn(
-            verticalArrangement = Arrangement.spacedBy(16.dp),
-            modifier = Modifier.padding(16.dp)
-        ) {
-            items(items = ImageLoaderDemoType.entries) {
-                Button(
-                    onClick = { type = it },
-                    modifier = Modifier.fillMaxWidth()
-                ) {
-                    Text(it.name)
+
+    CompositionLocalProvider(
+        LocalImageLoader provides remember { generateImageLoader() },
+    ) {
+        Box(modifier = Modifier.fillMaxSize()) {
+            LazyColumn(
+                verticalArrangement = Arrangement.spacedBy(16.dp),
+                modifier = Modifier.padding(16.dp)
+            ) {
+                items(items = ImageLoaderDemoType.entries) {
+                    Button(
+                        onClick = { type = it },
+                        modifier = Modifier.fillMaxWidth()
+                    ) {
+                        Text(it.name)
+                    }
                 }
             }
-        }
 
-        if (type != null) {
-            Box(modifier = Modifier.fillMaxSize()) {
-                when (type) {
-                    ImageLoaderDemoType.IMAGE -> ImageLoaderImageDemo()
-                    ImageLoaderDemoType.LOADING -> ImageLoaderLoadingDemo()
-                    ImageLoaderDemoType.ERROR -> ImageLoaderErrorDemo()
-                    ImageLoaderDemoType.PLACE_HOLDER -> ImageLoaderPlaceHolderDemo()
-                    ImageLoaderDemoType.CROSSFADE -> ImageLoaderCrossfadeDemo()
-                    ImageLoaderDemoType.ERROR_HANDLING -> ImageLoaderErrorHandlingDemo()
-                    null -> {}
-                }
+            if (type != null) {
+                Box(modifier = Modifier.fillMaxSize()) {
+                    when (type) {
+                        ImageLoaderDemoType.IMAGE -> ImageLoaderImageDemo()
+                        ImageLoaderDemoType.LOADING -> ImageLoaderLoadingDemo()
+                        ImageLoaderDemoType.ERROR -> ImageLoaderErrorDemo()
+                        ImageLoaderDemoType.PLACE_HOLDER -> ImageLoaderPlaceHolderDemo()
+                        ImageLoaderDemoType.CROSSFADE -> ImageLoaderCrossfadeDemo()
+                        ImageLoaderDemoType.ERROR_HANDLING -> ImageLoaderErrorHandlingDemo()
+                        null -> {}
+                    }
 
-                Button(
-                    onClick = { type = null },
-                    modifier = Modifier.align(Alignment.BottomCenter)
-                ) {
-                    Text("Close")
+                    Button(
+                        onClick = { type = null },
+                        modifier = Modifier.align(Alignment.BottomCenter)
+                    ) {
+                        Text("Close")
+                    }
                 }
             }
         }

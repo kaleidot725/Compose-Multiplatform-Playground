@@ -1,6 +1,7 @@
 package jp.kaleidot725.imageloader
 
 import App
+import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -13,11 +14,16 @@ import androidx.compose.ui.tooling.preview.Preview
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        latestApplicationContext = applicationContext
         this.enableEdgeToEdge(
             statusBarStyle = SystemBarStyle.dark(Color.BLACK),
             navigationBarStyle = SystemBarStyle.dark(Color.BLACK)
         )
         setContent { App() }
+    }
+
+    companion object {
+        lateinit var latestApplicationContext: Context
     }
 }
 
