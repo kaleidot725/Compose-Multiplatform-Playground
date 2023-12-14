@@ -1,7 +1,7 @@
-
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidLibrary)
+    alias(libs.plugins.skie)
 }
 
 kotlin {
@@ -12,7 +12,7 @@ kotlin {
             }
         }
     }
-    
+
     listOf(
         iosX64(),
         iosArm64(),
@@ -23,7 +23,7 @@ kotlin {
             isStatic = true
         }
     }
-    
+
     sourceSets {
         commonMain.dependencies {
             // put your Multiplatform dependencies here
