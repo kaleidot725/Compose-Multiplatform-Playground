@@ -1,7 +1,7 @@
 import Shared
 import SwiftUI
 
-struct ContentView: View {
+struct TurnView: View {
     var turn: Turn
     var body: some View {
         VStack {
@@ -17,8 +17,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct TurnView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(turn: Turn.left)
+        TurnView(turn: Turn.left)
     }
 }

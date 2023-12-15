@@ -5,7 +5,10 @@ import SwiftUI
 struct iOSApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView(turn: Turn.left)
+            VStack {
+                TurnView(turn: Turn.left)
+                StatusView(status: Status.Error(value: "UNKNOWN"))
+            }
         }
     }
 }
