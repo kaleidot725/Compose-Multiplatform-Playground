@@ -1,5 +1,5 @@
-import SwiftUI
 import Shared
+import SwiftUI
 
 struct ContentView: View {
     var turn: Turn
@@ -12,8 +12,6 @@ struct ContentView: View {
                 Text("RIGHT")
             case .neither:
                 Text("NEITHER")
-            default:
-                Text("DEFAULT")
             }
         }
     }

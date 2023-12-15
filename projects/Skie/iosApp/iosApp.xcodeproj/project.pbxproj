@@ -49,10 +49,18 @@
 			path = katz.xcuserdatad;
 			sourceTree = "<group>";
 		};
+		321E5602AFC4BE4A0C968736 /* katz.xcuserdatad */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = katz.xcuserdatad;
+			sourceTree = "<group>";
+		};
 		321E56333710356C998A7078 /* project.xcworkspace */ = {
 			isa = PBXGroup;
 			children = (
 				321E5F6209DD661B3B322CF1 /* xcshareddata */,
+				321E5CC57714AD377A3D96CA /* xcuserdata */,
 			);
 			name = project.xcworkspace;
 			path = iosApp.xcodeproj/project.xcworkspace;
@@ -71,6 +79,14 @@
 			children = (
 			);
 			path = configuration;
+			sourceTree = "<group>";
+		};
+		321E5CC57714AD377A3D96CA /* xcuserdata */ = {
+			isa = PBXGroup;
+			children = (
+				321E5602AFC4BE4A0C968736 /* katz.xcuserdatad */,
+			);
+			path = xcuserdata;
 			sourceTree = "<group>";
 		};
 		321E5E4750324E79B1FEB1E6 /* xcschemes */ = {
