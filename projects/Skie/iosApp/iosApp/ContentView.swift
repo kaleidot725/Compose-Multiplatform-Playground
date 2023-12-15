@@ -2,19 +2,25 @@ import SwiftUI
 import Shared
 
 struct ContentView: View {
+    var turn: Turn
     var body: some View {
         VStack {
-            Image(systemName: "swift")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("SwiftUI: \(Greeting().greet())")
+            switch turn {
+            case .left:
+                Text("LEFT")
+            case .right:
+                Text("RIGHT")
+            case .neither:
+                Text("NEITHER")
+            default:
+                Text("DEFAULT")
+            }
         }
-        .padding()
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(turn: Turn.left)
     }
 }
