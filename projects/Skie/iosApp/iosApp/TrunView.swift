@@ -13,6 +13,17 @@ struct TurnView: View {
             case .neither:
                 Text("NEITHER")
             }
+
+//            switch turn {
+//            case Turn.left:
+//                Text("LEFT")
+//            case Turn.right:
+//                Text("RIGHT")
+//            case Turn.neither:
+//                Text("NEWITHER")
+//            default:
+//                Text("DEFAULT")
+//            }
         }
     }
 }

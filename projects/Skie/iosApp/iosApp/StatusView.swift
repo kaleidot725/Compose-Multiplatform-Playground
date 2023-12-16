@@ -14,6 +14,17 @@ struct StatusView: View {
             case .success(let success):
                 Text("SUCCES \(success.value)")
             }
+
+//            switch status {
+//            case let loading as Status.Loading:
+//                Text("LOADING")
+//            case let error as Status.Error:
+//                Text("ERROR \(error.value)")
+//            case let success as Status.Success:
+//                Text("SUCCESS \(success.value)")
+//            default:
+//                Text("DEFAULT")
+//            }
         }
     }
 }
