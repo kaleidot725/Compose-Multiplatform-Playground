@@ -11,6 +11,8 @@
 		058557D9273AAEEB004C7B11 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058557D8273AAEEB004C7B11 /* Preview Assets.xcassets */; };
 		2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2152FB032600AC8F00CF470E /* iOSApp.swift */; };
 		321E504253DCB5046CAF0A78 /* StatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321E5BD78F63572E7E551E4B /* StatusView.swift */; };
+		321E513022BAD2A4B8FB147E /* GlobalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321E5FAFA433E76B4A3AEE9F /* GlobalView.swift */; };
+		321E5A65F43BBA86AF3EA800 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321E5F083F20ECC334888880 /* UserView.swift */; };
 		7555FF83242A565900829871 /* TrunView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF82242A565900829871 /* TrunView.swift */; };
 /* End PBXBuildFile section */
 
@@ -19,6 +21,8 @@
 		058557D8273AAEEB004C7B11 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2152FB032600AC8F00CF470E /* iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSApp.swift; sourceTree = "<group>"; };
 		321E5BD78F63572E7E551E4B /* StatusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusView.swift; sourceTree = "<group>"; };
+		321E5F083F20ECC334888880 /* UserView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
+		321E5FAFA433E76B4A3AEE9F /* GlobalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalView.swift; sourceTree = "<group>"; };
 		7555FF7B242A565900829871 /* .app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = .app; path = Skie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7555FF82242A565900829871 /* TrunView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrunView.swift; sourceTree = "<group>"; };
 		7555FF8C242A565B00829871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -142,6 +146,8 @@
 				7555FF82242A565900829871 /* TrunView.swift */,
 				2152FB032600AC8F00CF470E /* iOSApp.swift */,
 				058557D7273AAEEB004C7B11 /* Preview Content */,
+				321E5F083F20ECC334888880 /* UserView.swift */,
+				321E5FAFA433E76B4A3AEE9F /* GlobalView.swift */,
 			);
 			path = iosApp;
 			sourceTree = "<group>";
@@ -248,6 +254,8 @@
 				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,
 				7555FF83242A565900829871 /* TrunView.swift in Sources */,
 				321E504253DCB5046CAF0A78 /* StatusView.swift in Sources */,
+				321E5A65F43BBA86AF3EA800 /* UserView.swift in Sources */,
+				321E513022BAD2A4B8FB147E /* GlobalView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
