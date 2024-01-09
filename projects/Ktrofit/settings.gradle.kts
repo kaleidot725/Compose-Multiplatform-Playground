@@ -1,6 +1,5 @@
 rootProject.name = "Ktrofit"
-include(":shared")
-includeBuild("convention-plugins")
+include(":composeApp")
 
 pluginManagement {
     repositories {

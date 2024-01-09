@@ -1,33 +1,23 @@
-# Ktrofit
+# Compose Multiplatform Application
 
-Kotlin Multiplatform Library
+## Before running!
+ - check your system with [KDoctor](https://github.com/Kotlin/kdoctor)
+ - install JDK 17 on your machine
+ - add `local.properties` file to the project root and set a path to Android SDK there
 
-### Publish to MavenCentral
+### Android
+To run the application on android device/emulator:  
+ - open project in Android Studio and run imported android run configuration
 
-1) Registering a Sonatype account as described here: 
-   https://dev.to/kotlin/how-to-build-and-publish-a-kotlin-multiplatform-library-going-public-4a8k
-2) Add developer id, name, email and the project url to
-   `/convention-plugins/src/main/kotlin/convention.publication.gradle.kts`
-3) Add the secrets to `local.properties`:
+To build the application bundle:
+ - run `./gradlew :composeApp:assembleDebug`
+ - find `.apk` file in `composeApp/build/outputs/apk/debug/composeApp-debug.apk`
 
-```
-signing.keyId=...
-signing.password=...
-signing.secretKeyRingFile=...
-ossrhUsername=...
-ossrhPassword=...
-```
+### Desktop
+Run the desktop application: `./gradlew :composeApp:run`
 
-4) Run `./gradlew :dodo:publishAllPublicationsToSonatypeRepository`
+### iOS
+To run the application on iPhone device/simulator:
+ - Open `iosApp/iosApp.xcproject` in Xcode and run standard configuration
+ - Or use [Kotlin Multiplatform Mobile plugin](https://plugins.jetbrains.com/plugin/14936-kotlin-multiplatform-mobile) for Android Studio
 
-### Build platform artifacts
-
-#### Android aar
-
-- Run `./gradlew :shared:assembleRelease`
-- Output: `/shared/build/outputs/aar/shared-release.aar`
-
-#### iOS Framework
-
-- Run `./gradlew :shared:linkReleaseFrameworkIosArm64`
-- Output: `/shared/build/bin/iosArm64/releaseFramework/shared.framework`
